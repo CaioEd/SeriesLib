@@ -1,33 +1,46 @@
 import { useState } from 'react'
-import { Container } from './style'
+import { Container, MovieList, Movie } from './style'
 import './styles/App.css'
 
 function App() {
+
+  const movies = [
+    {
+      id: 1,
+      title: 'The Batman',
+      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
+    },
+    {
+      id: 2,
+      title: 'Spider-Man',
+      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
+    },
+    {
+      id: 3,
+      title: 'The Batman',
+      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
+    }
+
+  ]
 
   return (
     <Container className="App">
       <h1>MoviesLib</h1>
       <hr />
 
-      <ul>
-        <li>
-          <a href="#"><img src="https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg" alt="Capa filme" /></a>
-          <span>The Batman</span>
-          <span></span>
-        </li>
+      <MovieList>
 
-        <li>
-          <a href="#"><img src="https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg" alt="Capa filme" /></a>
-          <span>The Batman</span>
-          <span></span>
-        </li>
+      {movies.map(movie =>{
+          return(
+            <Movie key={movie.id}>
+              <a href="#"><img src={movie.img_url} alt={movie.title} /></a>
+              <span>{movie.title}</span>
+              <span></span>
+            </Movie>
+          )
+        })}
 
-        <li>
-          <a href="#"><img src="https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg" alt="Capa filme" /></a>
-          <span>The Batman</span>
-          <span></span>
-        </li>
-      </ul>
+      </MovieList>
 
     </Container>
   )

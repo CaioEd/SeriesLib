@@ -5,27 +5,28 @@ export const Container = styled.div`
         text-align: center;
         margin: 2rem auto;
 
-        background-color: red;
+        background-color: #FD151B;
         width: 13rem;
 
         border-radius: 10px;
     }
 
-    ul{
-        margin-top: 2rem;
+`
 
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        column-gap: 3rem;
-        row-gap: 4rem;
-    }
+export const MovieList = styled.ul`
+    margin-top: 2rem;
 
-    li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 3rem;
+    row-gap: 4rem;
+`
+
+export const Movie = styled.li`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     img{
         width: 200px;
@@ -45,5 +46,4 @@ export const Container = styled.div`
     a:hover{
         transform: scale(1.05)
     }
-
 `
