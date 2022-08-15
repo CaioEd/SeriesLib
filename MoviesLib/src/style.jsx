@@ -5,25 +5,25 @@ export const Container = styled.div`
         text-align: center;
         margin: 2rem auto;
 
-        background-color: #FD151B;
-        width: 13rem;
+        background-color: #3B9AE1;
+        width: 11rem;
 
         border-radius: 10px;
     }
 
 `
 
-export const MovieList = styled.ul`
+export const SeriesList = styled.ul`
     margin-top: 2rem;
 
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 3rem;
-    row-gap: 4rem;
+    column-gap: 6rem;
+    row-gap: 6rem;
 `
 
-export const Movie = styled.li`
+export const Series = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +35,7 @@ export const Movie = styled.li`
     }
 
     span{
+        text-align: center;
         font-weight: bold;
         font-size: 18px;
     }

@@ -1,46 +1,38 @@
-import { useState } from 'react'
-import { Container, MovieList, Movie } from './style'
+import { useState, useEffect } from 'react'
+import { Container, SeriesList, Series } from './style'
 import './styles/App.css'
 
 function App() {
 
-  const movies = [
-    {
-      id: 1,
-      title: 'The Batman',
-      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
-    },
-    {
-      id: 2,
-      title: 'Spider-Man',
-      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
-    },
-    {
-      id: 3,
-      title: 'The Batman',
-      img_url: "https://media.fstatic.com/bwmrNmCCyk4NFoOVdZ1lJBRUth4=/210x312/smart/media/movies/covers/2021/10/FBs8-vLUUAIm94F.jpg"
-    }
+  const [movies, setMovies] = useState([])
+  const img_path = 'https://image.tmdb.org/t/p/w500'
 
-  ]
+  useEffect(() =>{
+  // consumindo a api
+
+  fetch('https://api.themoviedb.org/3/tv/popular?api_key=291da6e68320eb0d68736c1c02a163fe&language=en-US&page=1')
+  .then(response => response.json())
+  .then(data => setMovies(data.results))
+  }, [])
 
   return (
     <Container className="App">
-      <h1>MoviesLib</h1>
+      <h1>SeriesLib</h1>
       <hr />
 
-      <MovieList>
+      <SeriesList>
 
       {movies.map(movie =>{
           return(
-            <Movie key={movie.id}>
-              <a href="#"><img src={movie.img_url} alt={movie.title} /></a>
-              <span>{movie.title}</span>
-              <span></span>
-            </Movie>
+            <Series key={movie.id}>
+              <a href="#"><img src={`${img_path}${movie.poster_path}`} alt={movie.name} /></a>
+              <span>{movie.name}</span>
+              <span>{movie.vote_average}</span>
+            </Series>
           )
         })}
 
-      </MovieList>
+      </SeriesList>
 
     </Container>
   )
