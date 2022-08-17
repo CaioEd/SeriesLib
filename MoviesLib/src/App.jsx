@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Container, SeriesList, Series } from './style'
+import { Link } from "react-router-dom";
 import './styles/App.css'
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       {movies.map(movie =>{
           return(
             <Series key={movie.id}>
-              <a href="#"><img src={`${img_path}${movie.poster_path}`} alt={movie.name} /></a>
+
+              <Link to={`/details/${movie.id}`}><img src={`${img_path}${movie.poster_path}`} alt={movie.name} /></Link>
               <span>{movie.name}</span>
               <span>{movie.vote_average}</span>
             </Series>
