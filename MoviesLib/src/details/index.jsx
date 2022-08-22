@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { Div } from "./style-details"
 
 function Details() {
@@ -13,7 +13,7 @@ function Details() {
         .then(data => {
             console.log(data)
 
-            const { name, overview, number_of_seasons, number_of_episodes, poster_path, tagline} = data
+            const { name, overview, number_of_seasons, number_of_episodes, poster_path} = data
 
             const serie = {
                 id,
@@ -22,7 +22,6 @@ function Details() {
                 overview,
                 number_of_seasons,
                 number_of_episodes,
-                tagline
             }
 
             setSerie(serie)
@@ -40,9 +39,14 @@ function Details() {
                 <h1>{serie.name}</h1>
                 <span>{serie.tagline}</span>
                 <span>{serie.overview}</span>
+                <br />
                 <span>{serie.number_of_seasons} seasons</span>
+                <br />
                 <span>{serie.number_of_episodes} episodes</span>
+                <br />
+                <Link to="/">
                 <button>Go back</button>
+                </Link>
             </div>
             
         </Div>
