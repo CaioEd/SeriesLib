@@ -39,4 +39,31 @@ export const Div = styled.div`
     button:hover{
         filter: brightness(1.2);
     }
+
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin: auto;
+
+        .details{
+            margin-top: -80px;
+            margin-left: 90px;
+        }
+
+        img{
+            width: 200px;
+
+        }
+
+        h1{
+            font-size: 20px;
+        }
+
+        span{
+            font-size: 12px;
+        }
+    }
 `
