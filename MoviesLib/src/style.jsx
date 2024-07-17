@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
     h1{
         text-align: center;
-        margin: 2rem auto;
+        margin: 2rem 2rem 2rem 2rem;
 
-        background-color: #3B9AE1;
+        background-color: rgb(255, 217, 79);
+        color: black;
         width: 11rem;
 
         border-radius: 10px;

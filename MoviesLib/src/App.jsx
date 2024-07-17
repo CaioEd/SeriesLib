@@ -29,7 +29,7 @@ function App() {
 
               <Link to={`/details/${movie.id}`}><img src={`${img_path}${movie.poster_path}`} alt={movie.name} /></Link>
               <span>{movie.name}</span>
-              <span>{movie.vote_average}</span>
+              <span>{movie.vote_average.toFixed(1)}</span>
             </Series>
           )
         })}
