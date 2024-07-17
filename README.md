@@ -1,6 +1,6 @@
 <h1 align="center">Series Lib</h1>
  <p align="center"> <strong>Web app, with informations about tv shows (name, description, reviews, etc).</strong> </p>
- <img  src="print-site.jpg" alt="print do site">
+ <img  src="print-site.png" alt="print do site">
  <br>
 <h2>Tecnologies used in this project </h2>
 <ul>
