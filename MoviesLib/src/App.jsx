@@ -11,7 +11,7 @@ function App() {
   useEffect(() =>{
   // consumindo a api
 
-  fetch('https://api.themoviedb.org/3/tv/popular?api_key=291da6e68320eb0d68736c1c02a163fe&language=en-US&page=1')
+  fetch('https://api.themoviedb.org/3/tv/popular?api_key=')
   .then(response => response.json())
   .then(data => setMovies(data.results))
   }, [])
