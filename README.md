@@ -1,5 +1,5 @@
 <h1 align="center">TMDB App</h1>
- <p align="center"> <strong>Web app, with informations about tv shows (name, description, reviews, etc).</strong> </p>
+ <p align="center"> <strong>Web app, with informations about movies and tv shows (name, description, reviews, etc).</strong> </p>
  <img  src="print-site.png" alt="print do site">
  <img  src="print-site2.png" alt="print do site"> 
  <br>
